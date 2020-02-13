@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+   int i,j;
+   printf("Satir sayisini girin: ");
+   int satir;
+   scanf("%d", &satir);
+   int a = 1;
+   int b = satir;
+   int k = 0;
+
+   for(i = 0; i < satir*2; i++)
+   {
+       for(j = 0; j < b; j++)
+       {
+           printf(" ");
+       }
+       for(j = 0; j < a; j++)
+       {
+           printf("*");
+
+       }
+       k++;
+
+       printf("\n");
+      if(k < satir)
+      {
+          a = a+2;
+          b--;
+      }
+      else if(k >= satir)
+      {
+          a = a-2;
+          b++;
+      }
+   }
+    return 0;
+}
