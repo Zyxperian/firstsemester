@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+void elemanSil(int dizi[], int konum, int size, int eleman)
+{
+    int i,j;
+    int x = dizi[konum];
+        for(i = 0; i < size - konum + 1; i++)
+        {
+           dizi[size-i] = dizi[size - 1 - i] ;
+
+        }
+        dizi[konum-1] = eleman;
+}
+int main()
+{
+        srand(time(NULL));
+        int size, konum, eleman;
+        printf("Dizi kac elemanli olsun?: ");
+        scanf("%d", &size);
+        int dizi[size];
+        printf("Dizi: ");
+        for(int i = 0; i < size; i++)
+        {
+            dizi[i] = rand() % 100;
+            printf("%d ", dizi[i]);
+        }
+        printf("\nHangi konuma eleman eklemek istiyorsunuz?: ");
+        scanf("%d", &konum);
+        printf("Eklemek istediğiniz eleman?: ");
+        scanf("%d", &eleman);
+        elemanSil(dizi, konum, size, eleman);
+        printf("Yeni dizi: ");
+        for(int i = 0; i < size+1; i++)
+            printf("%d ", dizi[i]);
+
+    return 0;
+}
