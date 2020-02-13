@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
+/*Kullanıcıdan alınan satır sayısı uzunluğunda "floyd üçgeni"
+oluşturan kodu yazınız*/
 void floydUcgeni(int x)
 {
     int y = 1;
