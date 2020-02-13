@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+//Kullanıcıdan alınan kadar köşe uzunluğuna sahip bir karenin köşegenlerini çiziniz.
 int kare(int x)
 {
     return x*x;
