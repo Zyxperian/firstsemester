@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <stdlib.h>
+int maxMinBul(int *pt)
+{
+    int max,min;
+    max=min=*pt;
+    for(int i = 0; i<10; i++)
+    {
+        if(max < *(pt + i))
+            max = *(pt + i);
+        if(min > *(pt + i))
+            min = *(pt + i);
+    }
+    printf("Max: %d Min: %d", max, min);
+}
+
+
+int main()
+{
+    int array[10];
+    printf("10 tane sayi girin:\n");
+    int *pt = array;
+    for(int i = 0; i<10; i++)
+    {
+        printf("%d. ", i+1);
+        scanf("%d", pt+i);
+    }
+
+    maxMinBul(pt);
+
+
+    return 0;
+}
