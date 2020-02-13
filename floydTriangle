@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+void floydUcgeni(int x)
+{
+    int y = 1;
+    for(int i = 0; i < x; i++)
+    {
+        for(int j = 0; j < i; j++)
+        {
+            printf("%d ", y);
+            y++;
+        }
+        printf("\n");
+    }
+}
+
+int main()
+{
+    int satir;
+    printf("Satir sayisi:");
+    scanf("%d", &satir);
+    floydUcgeni(satir);
+    return 0;
+}
