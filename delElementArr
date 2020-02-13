@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+/*Boyutu kullanıcıdan alınan rastgelen oluşturulan bir dizide, yine 
+kullanıcıdan alınan konumdaki elemanın silinmesini sağlayan kodu yazınız*/
 void elSil(int arr[], int sil, int size)
 {
     for(int i = sil; i < size - 1; i++)
