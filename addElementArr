@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+/*Boyutu kullanıcıdan alınan ve rastgele oluşturulan bir dizide, yine
+kullanıcıdan alınan konuma istenen elemanı ekleyen kodu yazınız.*/
 void elemanSil(int dizi[], int konum, int size, int eleman)
 {
     int i,j;
