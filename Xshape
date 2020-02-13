@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+int kare(int x)
+{
+    return x*x;
+}
+
+int main()
+{
+    printf("Kose uzunlugu: ");
+    int kose; scanf("%d", &kose);
+    int i,j;
+    for(i = 1; i <= kose; i++)
+    {
+        for(j = 1; j <= kose; j++)
+        {
+            if(i*j==kare(i) || i+j == kose+1)
+            {
+                printf("*");
+            }
+            else
+                printf(" ");
+        }
+        printf("\n");
+    }
+    return 0;
+}
