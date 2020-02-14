@@ -1,0 +1,78 @@
+#include <stdio.h>
+#include <stdlib.h>
+/*Kullanicidan alinan karakterin sesli harf olup olmadigini
+switch-case yapisi kullanarak bulunuz.
+Kullanicidan alinan karakterin rakam ya da özel karakter
+(/, -, ?, (,),%,&...) if-else yapisi ile kontrol ediniz.
+(ASCII tablosuna bakmak yasaktir.)*/
+int main()
+{
+    //ASCII tablsouna bakmak yasak olsa bile
+    //ASCII de 128 karakter (0-127) oldugu bilindiginden
+    //basit bir for döngüsüyle asciiye bakilabilinir.
+
+   /*for(int i = 0; i<127; i++)
+    printf("%d. %c\n", i,i);*/
+
+   //97-122 -> Kucuk harfler
+   //65-90 -> Buyuk harfler
+   //33-47, 123-126, 91-96, 58-63 -> Ozel harfler.
+   //48-57 -> Rakam araliklari
+   char karakter;
+   printf("Karakter giriniz: ");
+   scanf(" %c", &karakter);
+
+   if(97 <= karakter && karakter <= 122 || 65 <= karakter && karakter <= 90)
+   {
+       switch(karakter)
+       {
+          case 'a':
+           printf("Sesli harf.");
+           break;
+           case 'e':
+           printf("Sesli harf.");
+           break;
+           case 'i':
+           printf("Sesli harf.");
+           break;
+           case 'o':
+           printf("Sesli harf.");
+           break;
+           case 'u':
+           printf("Sesli harf.");
+           break;
+            case 'A':
+           printf("Sesli harf.");
+           break;
+           case 'E':
+           printf("Sesli harf.");
+           break;
+           case 'I':
+           printf("Sesli harf.");
+           break;
+           case 'O':
+           printf("Sesli harf.");
+           break;
+           case 'U':
+           printf("Sesli harf.");
+           break;
+           default:
+           printf("Sessiz harf.");
+           break;
+       }
+
+   }
+       else if(33<=karakter && karakter <= 47 || 123<=karakter && karakter <= 126
+             || 91<= karakter && karakter <= 96 || 58<=karakter && karakter <= 63)
+       {
+           printf("Ozel karakter.");
+       }
+
+       else if(48 <= karakter <= 57)
+       {
+           printf("Rakam.");
+
+       }
+
+    return 0;
+}
