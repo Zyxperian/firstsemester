@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <stdlib.h>
+/* Oyuncudan a ve b değerlerini isteyiniz.
+a terimlerin arasındaki artış mikatarı ve b terim sayısıdır.
+buna göre
+0!+a!+2a!+3a!+..(b-1)a!
+denklemini hesaplayan programi yaziniz*/
+
+int seriHesapla(int a, int b)
+{
+    int i,j,sonuc=1, toplam=1;
+    printf("1 + ");
+    for(i = 1; i<b; i++)
+    {
+        for(j = 1; j<=a; j++)
+        {
+            sonuc *= j;
+        }
+        printf("%d + ", sonuc);
+        toplam += sonuc;
+        sonuc = 1;
+        a += a/i;
+
+    }
+    return toplam;
+
+}
+
+int main()
+{
+    int a,b;
+    printf("a: ");
+    scanf("%d", &a);
+    printf("b: ");
+    scanf("%d", &b);
+    printf("\nToplam Sonuc: %d", seriHesapla(a,b));
+    return 0;
+}
