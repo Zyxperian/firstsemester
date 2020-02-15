@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+/*Kullanıcıdan alınan satır ve sütun sayısına
+göre satranç tahtası görüntüsünü elde ediniz.*/
+int main()
+{
+    int sat,sut,i,j;
+    printf("Satir sayisini giriniz: ");
+    scanf("%d", &sat);
+    printf("Sutun sayisini giriniz: ");
+    scanf("%d", &sut);
+    for(i = 0; i<sat; i++)
+    {
+        for(j = 0; j<sut; j++)
+        {
+            if((i+j)%2 == 0)
+                printf("1");
+            else
+                printf("0");
+        }
+        printf("\n");
+    }
+    return 0;
+}
