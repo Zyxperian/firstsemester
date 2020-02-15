@@ -1,0 +1,42 @@
+#include <stdio.h>
+#include <stdlib.h>
+/*Basit hesap makinesi yapın(+ - * /)
+Bölme işleminde bölen kısmında 0 olup olmadığını
+if-else yapısıyla kontrol edin.
+İşlemleri yaparken switch-case yapısı kullanın*/
+int main()
+{
+    float a,b;
+    char i;
+    printf("         Hesap Makinesi\n-------------------------------\n");
+    printf("Enter [Sayi 1] Islem[+ - * /] [Sayi 2] : \n");
+    scanf("%f %c %f", &a, &i, &b);
+
+    if(i == '/' && b == 0)
+    {
+        printf("Bolme isleminde bir sayinin 0a bolumu tanimsizdir.");
+    }
+    else
+    {
+        printf("%.2f %c %.2f = ",a,i,b);
+        switch(i)
+        {
+            case '+':
+                printf("%.2f", a+b);
+            break;
+             case '-':
+                printf("%.2f", a-b);
+            break;
+             case '*':
+                printf("%.2f", a*b);
+            break;
+             case '/':
+                printf("%.2f", a/b);
+            break;
+
+
+        }
+    }
+
+    return 0;
+}
