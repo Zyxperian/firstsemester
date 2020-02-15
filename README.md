@@ -1,2 +1,2 @@
 # firstsemester
-Stuff that i learned in the first semester of university
+Stuff that i've learned in the first semester of university
