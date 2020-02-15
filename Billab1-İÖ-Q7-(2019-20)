@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <stdlib.h>
+/*
+Kullanıcıdan alınan tam sayi ve üs değerlerini isteyiniz.
+Alınan tam sayının rakamlarını toplayıp, kulanıcıdan alınan ü
+s değeri kadar
+üssünü alınız.
+Kullanılacak fonksiyonların isimleri "rakamTopla" ve
+"usAlma" olacaktır. Kullanılacak parametreler size bırakılmıştır.
+
+!!Kullanılacak fonksiyonlar "recursive" olmak zorundadır.
+*/
+int usAlma(int x, int y)
+{
+    if(y==0)
+    return 1;
+
+    return x*usAlma(x,y-1);
+}
+int rakamTopla(int x)
+{
+    if(x==0)
+    return 0;
+    int a = x%10;
+    return a+rakamTopla(x/10);
+
+}
+int main()
+{
+    int tamSay, us;
+    printf("Tamsayi giriniz: ");
+    scanf("%d", &tamSay);
+    printf("Us giriniz:");
+    scanf("%d", &us);
+    tamSay = rakamTopla(tamSay);
+    printf("Sayinin rakamlarinin toplaminin %d ussu: %d", us, usAlma(tamSay,us));
+
+    return 0;
+}
