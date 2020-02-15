@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+/*Kullanıcıdan alınan sayıya göre baklacva sekli cizdiriniz.*/
 int main()
 {
    int i,j;
