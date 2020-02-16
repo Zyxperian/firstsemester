@@ -1,10 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 /*
-Kullanıcıdan alınan tam sayi ve üs değerlerini isteyiniz.
-Alınan tam sayının rakamlarını toplayıp, kulanıcıdan alınan ü
-s değeri kadar
-üssünü alınız.
+Kullanıcıdan tam sayi ve üs değerlerini isteyiniz.
+Alınan tam sayının rakamlarını toplayıp, kulanıcıdan alınan 
+üs değeri kadar üssünü alınız.
 Kullanılacak fonksiyonların isimleri "rakamTopla" ve
 "usAlma" olacaktır. Kullanılacak parametreler size bırakılmıştır.
 
