@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-/* Oyuncudan a ve b değerlerini isteyiniz.
+/* Kullanıcıdan a ve b değerlerini isteyiniz.
 a terimlerin arasındaki artış mikatarı ve b terim sayısıdır.
 buna göre
 0!+a!+2a!+3a!+..(b-1)a!
