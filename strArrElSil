@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define MAX 100
+//Kullanıcıdan alınan karakter dizisinde istenilen karakteri silen kodu yazınız.
+
+int main()
+{
+    char str[MAX], sil;
+    int i=0;
+    printf("Bir karakter dizi girin: ");
+    gets(str);
+    printf("Hangi karakteri silmek istiyorsunuz?: ");
+    scanf(" %c", &sil);
+    char *pt = str;
+
+    while(*(pt+i) != sil)
+        i++;
+
+    while(*(pt+i)!= '\0')
+    {
+        *(pt+i) = *(pt+i+1);
+        i++;
+    }
+
+    printf("%s", str);
+
+
+    return 0;
+}
