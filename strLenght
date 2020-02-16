@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define MAX 100
+//Kullanıcıdan alınan karakter dizisinin uzunluğunu bulan kodu yazınız.
+int struzunluk(char *pt)
+{
+    int j=0;
+    while(*(pt+j) != '\0')
+        j++;
+    return j;
+}
+int main()
+{
+    printf("Bir karakter dizisi giriniz: ");
+    char str[MAX];
+    gets(str);
+    char *pt = str;
+    printf("%s karakter dizisi %d karakterden olusmaktadir.",str, struzunluk(pt));
+    return 0;
+}
