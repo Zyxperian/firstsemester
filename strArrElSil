@@ -22,7 +22,7 @@ int main()
         i++;
     }
 
-    printf("%s", str);
+    printf("Yeni karakter dizisi: %s", str);
 
 
     return 0;
